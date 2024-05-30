@@ -10,8 +10,8 @@ export default defineConfig({
       entry: 'src/main.ts',
       userscript: {
         // 对应油猴脚本中的header配置
-        name: 'CSDN Test',
-        description: 'CSDN Test',
+        name: 'vite-monkey-csdn-test',
+        description: 'CSDN 删除广告 DEMO',
         namespace: 'http://tampermonkey.net/',
         version: '0.1',
         author: 'wyd',
