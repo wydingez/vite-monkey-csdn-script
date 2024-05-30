@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         CSDN Test
+// @name         vite-monkey-csdn-test
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @author       wyd
-// @description  CSDN Test
+// @description  CSDN 删除广告 DEMO
 // @include      *://*.csdn.net/*
 // @require      https://cdn.jsdelivr.net/npm/vue@3.4.27/dist/vue.global.prod.js
 // @require      data:application/javascript,window.Vue%3DVue%3B
