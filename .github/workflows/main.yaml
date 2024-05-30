@@ -1,33 +1,39 @@
 name: GitHub Pages
 
 on:
+# 1、在往 main 分支 push 代码时
   push:
     branches:
       - main
-  pull_request:
 
+# 2、执行以下脚本发布任务
 jobs:
   deploy:
+  # 3、运行在 ubuntu 系统上
     runs-on: ubuntu-20.04
     permissions:
       contents: write
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
+
+    # 4、依次执行以下步骤 
     steps:
+      # 拉去当前分支代码
       - uses: actions/checkout@v3
 
+      # pnpm 构建 node 环境
       - name: Setup Node
         uses: pnpm/action-setup@v4.0.0
         with:
           version: "8.11.0"
 
-      - name: Get yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
+      # 安装依赖
       - run: pnpm install
+
+      # 打包脚本
       - run: pnpm build
 
+      # 使用插件将 dist 目录 发布到 gh-pages 分支上
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
