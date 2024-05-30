@@ -6,6 +6,7 @@ import { GM_addStyle } from '$';
 import 'element-plus/dist/index.css';
 
 function init() {
+  console.log('vite-monkey-csdn-script init')
   //去除登录框
   GM_addStyle(".login-mark,#passportbox{display:none!important;}");
   GM_addStyle(".passport-login-container{display:none!important;}");

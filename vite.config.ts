@@ -13,7 +13,7 @@ export default defineConfig({
         name: 'vite-monkey-csdn-test',
         description: 'CSDN 删除广告 DEMO',
         namespace: 'http://tampermonkey.net/',
-        version: '0.1',
+        version: '0.2',
         author: 'wyd',
         include: '*://*.csdn.net/*',
       },
