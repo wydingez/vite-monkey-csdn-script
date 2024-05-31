@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         vite-monkey-csdn-test
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @author       wyd
 // @description  CSDN 删除广告 DEMO
 // @include      *://*.csdn.net/*
